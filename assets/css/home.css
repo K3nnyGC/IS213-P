@@ -1,5 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Almendra|Lemon');
+
+body{
+   background-image: url("https://fsb.zobj.net/crop.php?r=zNYPpC6P5yYSQXD-eRfdKkr-5GavVqrYccZ-M8ZrcowBGgKHoJKE69UWGL-GcJVAuoXP8UL0aAfuZUg5IZMrusw0GSRHdFVZHPoT4OjRoXkX_5_fKvK3dF0RtUmFf0Dpxx8ebYeXOPqCiVCd2D_et3_4JMxwfieiT9wL8A");
+}
+
+h1 {
+   font-family: 'Lemon', sans-serif !important;
+}
+
 .home-titulo{
-   color: blue;
+   color: gold;
    font-size: 200%;
    text-align: center;
+}
+
+#msg-mail{
+   color: red;
+   font-size: 80%;
+   display: block;
+}
+#btn-enviar{
+   text-align: center;
+   width: 50%;
+   background-color: black;
+   border-radius: 5px;
+   color: white;
+   font-size: 120%;
+   font-weight: bold;
+   cursor: pointer;
+   display: inline-block;
+}
+
+
+
+#home-formulario{
+   width: 30%;
+   /*background-color: whitesmoke;*/
+   color: black;
+   padding: 1%;
+   margin: 5%;
+   text-align: center;
+   display: inline-block;
+   background-image: url("../img/panel.png");
+   background-size: 100% 100%;
+}
+
+#home-formulario p {
+   text-align: left;
+   padding-left: 5%;
+   font-family: 'Almendra', sans-serif;
+   margin-bottom: 0px;
+}
+
+#home-formulario input {
+   width: 80%;
+   border-radius: 5px;
+   margin-bottom: 1%;
+}
+
+.home-1{
+   text-align: center;
+   background-image: url("https://www.teacher.org/wp-content/uploads/2014/12/Kindergarten-Teacher.jpg");
+   background-size: 100%;
+   background-position-y: center
 }

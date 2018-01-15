@@ -1,12 +1,18 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+setlocale(LC_TIME, "es_ES.utf8");
+date_default_timezone_set('America/Lima');
+session_start(['cookie_lifetime' => 86400,]);
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>
-            Hola, Esta es una nueva Aula Virtual!
+            MyLittlechucky
         </title>
         <LINK REL=StyleSheet HREF='assets/css/home.css' TYPE='text/css' MEDIA=screen>
+        
+        <link rel='stylesheet' href='assets/css/css/font-awesome.min.css'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
 	     <!-- Latest compiled and minified CSS -->
 	    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -20,18 +26,28 @@
     <body>
         <header class="home-titulo">
         <h1>
-            Bienvenido al Aula Virtual
+            MyLittleChucky
         </h1>
         </header>
         <nav>
         </nav>
-        <div>
-            
+        <div class="jumbotron home-1">
+        <div id="home-formulario">
+            <form name="formulario" action="ws/cliente.php"  METHOD='POST'>
+              <p>Nombre:</p>
+              <input type="text" NAME="nombre" placeholder="Nombre" />
+              <br>
+              <p>Correo:</p>
+              <input type="text" NAME="correo" placeholder="Correo" />
+              <div id="msg-mail"><br></div>
+            </form>
+            <div id="btn-enviar">Enviar</div>
+        </div>
         </div>
         <footer>
             
         </footer>
-        
+        <script type='text/javascript' src='assets/js/home.js'></script>
     </body>
     
 </html>
