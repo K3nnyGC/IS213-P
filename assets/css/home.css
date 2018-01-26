@@ -6,11 +6,12 @@ body{
 
 h1 {
    font-family: 'Lemon', sans-serif !important;
+   font-size: 300%;
 }
 
 .home-titulo{
    color: gold;
-   font-size: 200%;
+   font-size: 300%;
    text-align: center;
 }
 
@@ -19,12 +20,12 @@ h1 {
    font-size: 80%;
    display: block;
 }
-#btn-enviar{
+#btn-enviar,#btn-enviar2{
    text-align: center;
    width: 50%;
-   background-color: black;
+   background-color: gold;
    border-radius: 5px;
-   color: white;
+   color: black;
    font-size: 120%;
    font-weight: bold;
    cursor: pointer;
@@ -33,34 +34,79 @@ h1 {
 
 
 
-#home-formulario{
+#home-formulario,#home-formulario2{
    width: 30%;
    /*background-color: whitesmoke;*/
    color: black;
    padding: 1%;
    margin: 5%;
    text-align: center;
-   display: inline-block;
-   background-image: url("../img/panel.png");
-   background-size: 100% 100%;
+   /*display: inline-block;*/
+   background-image: url("../img/papel.png");
+   background-size: 100% auto;
+   padding-top: 8%;
+   padding-left: 5%;
+   position: absolute;
+   left: 30%;
+   top: 20%;
 }
 
-#home-formulario p {
+#home-formulario p,#home-formulario2 p {
    text-align: left;
    padding-left: 5%;
    font-family: 'Almendra', sans-serif;
    margin-bottom: 0px;
 }
 
-#home-formulario input {
+#home-formulario input,#home-formulario2 input {
    width: 80%;
    border-radius: 5px;
    margin-bottom: 1%;
 }
 
 .home-1{
-   text-align: center;
-   background-image: url("https://www.teacher.org/wp-content/uploads/2014/12/Kindergarten-Teacher.jpg");
-   background-size: 100%;
-   background-position-y: center
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   top: 0px;
+   left: 0px;
+   display: none;
+}
+
+.img-centro img {
+   max-width: 100%;
+}
+
+.sombra{
+   filter: blur(6px);
+}
+
+.signup,.login{
+   display: none;
+}
+
+.b-barra{
+   text-align: right;
+}
+
+.b-signup, .b-login{
+   display: inline-block;
+   padding: 1%;
+   color: white;
+   background-color: black;
+   border-radius: 10px 10px 0px 0px;
+}
+
+.b-signup:hover, .b-login:hover{
+   color: black;
+   background-color: white;
+   cursor: pointer;
+}
+
+.b-login{
+   margin-left: 1%;
+}
+.b-signup{
+   margin-right: 1%;
 }

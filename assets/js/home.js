@@ -26,3 +26,16 @@ $("#btn-enviar").click(function() {
           }
       });
 });
+
+
+$("#b-login").click(function() {
+    $("#img-centro").toggleClass("sombra");
+    $("#home-formulario2").slideToggle("low");
+    $("#home-formulario").hide();
+});
+
+$("#b-signup").click(function() {
+    $("#img-centro").toggleClass("sombra");
+    $("#home-formulario").slideToggle("low");
+    $("#home-formulario2").hide();
+});
