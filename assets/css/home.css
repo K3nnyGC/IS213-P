@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Almendra|Lemon');
+@import url('https://fonts.googleapis.com/css?family=Almendra|Lemon|Amatic+SC|Orbitron');
 
 body{
    background-image: url("https://fsb.zobj.net/crop.php?r=zNYPpC6P5yYSQXD-eRfdKkr-5GavVqrYccZ-M8ZrcowBGgKHoJKE69UWGL-GcJVAuoXP8UL0aAfuZUg5IZMrusw0GSRHdFVZHPoT4OjRoXkX_5_fKvK3dF0RtUmFf0Dpxx8ebYeXOPqCiVCd2D_et3_4JMxwfieiT9wL8A");
+   
 }
 
 h1 {
-   font-family: 'Lemon', sans-serif !important;
+   font-family: 'Orbitron', sans-serif !important;
    font-size: 300%;
 }
 
@@ -65,17 +66,24 @@ h1 {
 }
 
 .home-1{
-   position: absolute;
+   position: fixed;
    width: 100%;
    height: 100%;
-   background-color: black;
+   background-image: url("../img/cPlomo.png");
    top: 0px;
    left: 0px;
    display: none;
 }
 
+
+.img-centro{
+   text-align: center;  
+}
+
 .img-centro img {
+   width: 100%;
    max-width: 100%;
+
 }
 
 .sombra{
@@ -88,6 +96,15 @@ h1 {
 
 .b-barra{
    text-align: right;
+}
+
+.cerrar{
+   top: 50px;
+   position: absolute;
+   font-size: 200%;
+   left: 90%;
+   color: grey;
+   cursor: pointer;
 }
 
 .b-signup, .b-login{
@@ -109,4 +126,43 @@ h1 {
 }
 .b-signup{
    margin-right: 1%;
+}
+
+.banners{
+   text-align: center;
+   margin-top: -25%;
+}
+
+.banner{
+   width: 20%;
+   margin: 5%;
+   margin-bottom: 0%;
+   height: 300px;
+   display: inline-block;
+   /*background-image:  url("../img/cPlomo.png");*/
+   background-color: #E7E099;
+   
+   transform: rotate(-5deg);
+   -webkit-transform: rotate(-5deg);
+   -moz-transform: rotate(-5deg);
+   -o-transform: rotate(-5deg);
+}
+
+.b-titulo{
+   text-align: center;
+   font-size: 200%;
+}
+
+.b-contenido{
+   text-align: justify;
+   font-size: 130%;
+   padding: 5%;
+   font-family: 'Amatic SC', cursive;
+   font-weight: bold;
+   
+}
+
+.b-icono{
+   text-align: center;
+   font-size: 500%;
 }

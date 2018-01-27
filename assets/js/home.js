@@ -29,12 +29,29 @@ $("#btn-enviar").click(function() {
 
 
 $("#b-login").click(function() {
+    $("#sombra").show();
     $("#img-centro").toggleClass("sombra");
     $("#home-formulario2").slideToggle("low");
     $("#home-formulario").hide();
 });
 
+$("#cerrar2").click(function() {
+    $("#sombra").fadeOut();
+    $("#img-centro").toggleClass("sombra");
+    $("#home-formulario2").slideToggle("low");
+    $("#home-formulario").hide();
+});
+
+$("#cerrar").click(function() {
+    $("#sombra").fadeOut();
+    $("#img-centro").toggleClass("sombra");
+    $("#home-formulario").slideToggle("low");
+    $("#home-formulario2").hide();
+});
+
+
 $("#b-signup").click(function() {
+    $("#sombra").show();
     $("#img-centro").toggleClass("sombra");
     $("#home-formulario").slideToggle("low");
     $("#home-formulario2").hide();

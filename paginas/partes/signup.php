@@ -1,4 +1,5 @@
     <div id="home-formulario" class="signup">
+        <div id="cerrar" class="cerrar"><i class="fa fa-times" aria-hidden="true"></i></div>
         <form name="formulario" action="ws/cliente.php"  METHOD='POST'>
             <!--<p>Nombre:</p>-->
             <input type="text" NAME="nombre" placeholder="Nombre" />
