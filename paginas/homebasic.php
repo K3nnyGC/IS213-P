@@ -5,8 +5,8 @@
 </header>
 <nav>
     <div class="b-barra">
-        <div id="b-login" class="b-login">LOGIN</div>
-        <div id="b-signup" class="b-signup">SIGNUP</div>
+        <div id="b-login" class="b-login">INGRESAR</div>
+        <div id="b-signup" class="b-signup">REGISTRAR</div>
     </div>
 </nav>
 <div class="img-centro">

@@ -7,9 +7,9 @@ $ns="urn:regsitrowsdl";
 $servicio->configureWSDL("ServicioRegistro",$ns);
 $servicio->schemaTargetNamespace = $ns;
 
-$servicio->register("signup", array('nombre' => 'xsd:string','correo' => 'xsd:string','password' => 'xsd:string' ), array('return' => 'xsd:string'),$ns);
+$servicio->register("signup", array('nombre' => 'xsd:string','correo' => 'xsd:string','password' => 'xsd:string','dni' => 'xsd:string' ), array('return' => 'xsd:string'),$ns);
 
-function signup($nombre,$correo,$clave){
+function signup($nombre,$correo,$clave,$dni){
 	//pasar a persistencia
 	$servername = getenv('IP');
     $username = getenv('C9_USER');
@@ -17,7 +17,7 @@ function signup($nombre,$correo,$clave){
     $database = "Intranet";
     $dbport = 3306;
     $db = new mysqli($servername, $username, $password, $database, $dbport);
-    $query = "INSERT INTO t_usuario (id_user, no_user, co_password, tx_email) VALUES ('','$nombre', '$clave','$correo')";
+    $query = "INSERT INTO t_usuario (id_user, no_user, co_password, tx_email, co_dni) VALUES ('','$nombre', '$clave','$correo','$dni')";
 	$result = $db->query($query);
 	//Fin de pasar a persistencia
 	return "Se ha registrado a $nombre con correo $correo";

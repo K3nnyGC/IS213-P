@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Almendra|Lemon|Amatic+SC|Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Almendra|Lemon|Amatic+SC|Orbitron|Catamaran');
 
 body{
    background-image: url("https://fsb.zobj.net/crop.php?r=zNYPpC6P5yYSQXD-eRfdKkr-5GavVqrYccZ-M8ZrcowBGgKHoJKE69UWGL-GcJVAuoXP8UL0aAfuZUg5IZMrusw0GSRHdFVZHPoT4OjRoXkX_5_fKvK3dF0RtUmFf0Dpxx8ebYeXOPqCiVCd2D_et3_4JMxwfieiT9wL8A");
@@ -16,7 +16,7 @@ h1 {
    text-align: center;
 }
 
-#msg-mail{
+#msg-mail,#msg-name,#msg-password,#msg-password2,#msg-dni {
    color: red;
    font-size: 80%;
    display: block;
@@ -49,7 +49,7 @@ h1 {
    padding-left: 5%;
    position: absolute;
    left: 30%;
-   top: 20%;
+   top: 10%;
 }
 
 #home-formulario p,#home-formulario2 p {
@@ -92,6 +92,12 @@ h1 {
 
 .signup,.login{
    display: none;
+   background-repeat: no-repeat;
+}
+
+.signup{
+   background-size: 100% 100% !important;
+   
 }
 
 .b-barra{
@@ -126,6 +132,29 @@ h1 {
 }
 .b-signup{
    margin-right: 1%;
+}
+
+.redes{
+   font-size: 200%;
+   text-align: center;
+   color: #0c5058;
+   padding-bottom: 1%;
+}
+
+.redes i {
+   cursor: pointer;
+}
+
+.login div p, .signup div p {
+   text-align: center !important;
+   padding: 1% !important;
+   margin-bottom: 3% !important;
+   /* margin-top: -2%; */
+   font-size: 150% !important;
+   font-weight: bold !important;
+   font-family: 'Catamaran', sans-serif !important;
+   color: #c55f84 !important;
+   
 }
 
 .banners{
