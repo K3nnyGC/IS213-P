@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>
-            ElnombreDelAplicativo
+            MySchool
         </title>
         <LINK REL=StyleSheet HREF='../assets/css/home.css' TYPE='text/css' MEDIA=screen>
+        <LINK REL=StyleSheet HREF='../assets/css/home-r.css' TYPE='text/css' MEDIA=screen>
         <link rel="icon" type="image/png" href="https://icon-icons.com/icons2/215/PNG/128/baby-boy256_25254.png" />
         <link rel='stylesheet' href='../assets/css/css/font-awesome.min.css'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>

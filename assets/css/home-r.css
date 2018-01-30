@@ -1,0 +1,21 @@
+@media screen and (max-width: 400px) {
+   .banners{
+          margin-top: 0%;
+   }
+   .banner{
+      width: 90%;
+      height: auto;
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+   }
+   
+   #home-formulario,#home-formulario2{
+      width: 80%;
+      left: 8%;
+      padding-top: 20%;
+      padding-bottom: 5%;
+      
+   }
+}

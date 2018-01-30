@@ -16,6 +16,10 @@ h1 {
    text-align: center;
 }
 
+#home-titulo-principal{
+   z-index: 1000;
+}
+
 #msg-mail,#msg-name,#msg-password,#msg-password2,#msg-dni {
    color: red;
    font-size: 80%;

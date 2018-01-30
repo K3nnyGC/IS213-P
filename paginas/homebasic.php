@@ -1,5 +1,5 @@
 <header class="home-titulo">
-    <h1>
+    <h1 id="home-titulo-principal">
         MySchool
     </h1>
 </header>
