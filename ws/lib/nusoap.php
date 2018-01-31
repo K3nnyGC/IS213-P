@@ -5348,31 +5348,63 @@ class wsdl extends nusoap_base {
 
 		$b = '
 		<html><head><title>NuSOAP: '.$this->serviceName.'</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style type="text/css">
-		    body    { font-family: arial; color: #000000; background-color: #ffffff; margin: 0px 0px 0px 0px; }
+			@import url("https://fonts.googleapis.com/css?family=Anton|Source+Code+Pro");
+		    body {
+		    	font-family: arial;
+		    	color: #000000;
+		    	background-color: #ffffff;
+		    	margin: 0px 0px 0px 0px;
+		    	padding: 0%;
+		    	background-image: url("https://www.todoiphone.net/wp-content/uploads/2014/03/WhatsApp-Wallpaper-24.png");
+		    	width: 100%;
+		    }
 		    p       { font-family: arial; color: #000000; margin-top: 0px; margin-bottom: 12px; }
 		    pre { background-color: silver; padding: 5px; font-family: Courier New; font-size: x-small; color: #000000;}
 		    ul      { margin-top: 10px; margin-left: 20px; }
 		    li      { list-style-type: none; margin-top: 10px; color: #000000; }
 		    .content{
-			margin-left: 0px; padding-bottom: 2em; }
+				margin-left: 0px;
+				padding-bottom: 2%; 
+				}
 		    .nav {
-			padding-top: 10px; padding-bottom: 10px; padding-left: 15px; font-size: .70em;
-			margin-top: 10px; margin-left: 0px; color: #000000;
-			background-color: #ccccff; width: 20%; margin-left: 20px; margin-top: 20px; }
+				padding-top: 10px;
+				padding-bottom: 10px; 
+				padding-left: 5%;
+				padding-right: 5%;
+				font-size: .70em;
+				color: #000000;
+				/*background-color: #ccccff;*/
+				background-image: url("../assets/img/cCeleste.png");
+				width: 20%;
+				margin-left: 5%;
+				margin-right: 5%;
+				margin-top: 1%;
+				width: 80%;}
 		    .title {
 			font-family: arial; font-size: 26px; color: #ffffff;
-			background-color: #999999; width: 100%;
-			margin-left: 0px; margin-right: 0px;
-			padding-top: 10px; padding-bottom: 10px;}
+			font-family: "Anton", sans-serif;
+			background-color: #246C68; width: 90%;
+			margin-left: 0%; margin-right: 0%;
+			padding-top: 10px; padding-bottom: 10px;
+			padding-left: 5%; padding-right: 5%;}
 		    .hidden {
-			position: absolute; visibility: hidden; z-index: 200; left: 250px; top: 100px;
-			font-family: arial; overflow: hidden; width: 600;
-			padding: 20px; font-size: 10px; background-color: #999999;
-			layer-background-color:#FFFFFF; }
-		    a,a:active  { color: charcoal; font-weight: bold; }
-		    a:visited   { color: #666666; font-weight: bold; }
+			/*position: absolute; visibility: hidden; z-index: 200; left: 250px; top: 100px;*/
+			font-family: arial; /*overflow: hidden; width: 600;*/
+			padding: 20px; /*font-size: 10px;*/ background-color: #239284;
+			layer-background-color:#FFFFFF; width: 80%; margin-top: 2%; }
+		    a,a:active  { color: red; font-weight: bold; }
+		    a:visited   { color: white; font-weight: bold; }
 		    a:hover     { color: cc3300; font-weight: bold; }
+		    code {
+		    	font-size: 120%;
+		    	font-family: "Source Code Pro", monospace;
+		    }
+		    .nav p {
+		    	font-size:150%;
+		    	font-weight: bold;
+		    }
 		</style>
 		<script language="JavaScript" type="text/javascript">
 		<!--
@@ -5423,17 +5455,16 @@ class wsdl extends nusoap_base {
 		</head>
 		<body>
 		<div class=content>
-			<br><br>
+
 			<div class=title>'.$this->serviceName.'</div>
 			<div class=nav>
-				<p>View the <a href="'.$PHP_SELF.'?wsdl">WSDL</a> for the service.
-				Click on an operation name to view it&apos;s details.</p>
+				<p>Ver el <a href="'.$PHP_SELF.'?wsdl">WSDL</a> del servicio.
+				A continuacion el detalle de las operaciones:</p>
 				<ul>';
 				foreach($this->getOperations() as $op => $data){
-				    $b .= "<li><a href='#' onclick=\"popout();popup('$op')\">$op</a></li>";
+				    $b .= "<li><h2>$op</h2></li>";
 				    // create hidden div
-				    $b .= "<div id='$op' class='hidden'>
-				    <a href='#' onclick='popout()'><font color='#ffffff'>Close</font></a><br><br>";
+				    $b .= "<div id='$op' class='hidden'>";
 				    foreach($data as $donnie => $marie){ // loop through opdata
 						if($donnie == 'input' || $donnie == 'output'){ // show input/output data
 						    $b .= "<font color='white'>".ucfirst($donnie).':</font><br>';
@@ -5456,7 +5487,16 @@ class wsdl extends nusoap_base {
 					$b .= '</div>';
 				}
 				$b .= '
-				<ul>
+				</ul>
+			</div>
+			<div class=nav>
+				<p>Consumo con nuSoap (php)</p>
+				<code>
+					include_once("lib/nusoap.php");<br>
+					$cliente = new nusoap_client("url del servicio",false);<br>
+					$parametros = array("parametro1" => valor1,"parametro2" => valor2,... );<br>
+					$respuesta = $cliente->call("metodo",$parametros);<br>
+				</code>
 			</div>
 		</div></body></html>';
 		return $b;

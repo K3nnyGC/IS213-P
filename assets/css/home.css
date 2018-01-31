@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Almendra|Lemon|Amatic+SC|Orbitron|Catamaran');
+@import url('https://fonts.googleapis.com/css?family=Almendra|Lemon|Amatic+SC|Orbitron|Catamaran|Source+Code+Pro');
 
 body{
    background-image: url("https://fsb.zobj.net/crop.php?r=zNYPpC6P5yYSQXD-eRfdKkr-5GavVqrYccZ-M8ZrcowBGgKHoJKE69UWGL-GcJVAuoXP8UL0aAfuZUg5IZMrusw0GSRHdFVZHPoT4OjRoXkX_5_fKvK3dF0RtUmFf0Dpxx8ebYeXOPqCiVCd2D_et3_4JMxwfieiT9wL8A");
@@ -198,4 +198,20 @@ h1 {
 .b-icono{
    text-align: center;
    font-size: 500%;
+}
+
+footer {
+   width: 100%;
+   background-color: black;
+   color: white;
+   margin: 0%;
+   padding: 1%;
+   font-size: 120%;
+   margin-top: 5%;
+   font-family: "Source Code Pro", monospace;
+   font-size: 130%;
+}
+
+footer div p {
+   padding-left: 2%;
 }

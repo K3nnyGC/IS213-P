@@ -6,10 +6,13 @@ include_once('Entidades/BD.php');
 $servicio= new soap_server();
 
 $ns="urn:regsitrowsdl";
-$servicio->configureWSDL("ServicioRegistro",$ns);
+$servicio->configureWSDL("Servicio de Registro en Intranet",$ns);
 $servicio->schemaTargetNamespace = $ns;
 
-$servicio->register("signup", array('nombre' => 'xsd:string','correo' => 'xsd:string','password' => 'xsd:string','dni' => 'xsd:string' ), array('return' => 'xsd:string'),$ns);
+$servicio->register("signup",
+                    array('nombre' => 'xsd:string','correo' => 'xsd:string','password' => 'xsd:string','dni' => 'xsd:string' ),
+                    array('return' => 'xsd:string'),
+                    $ns,'','','',"Size:Nombre(64), correo(255), password(32), dni(8)");
 
 function signup($nombre,$correo,$clave,$dni){
  $usuario= new Usuario();
