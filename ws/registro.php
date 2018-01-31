@@ -2,6 +2,7 @@
 
 include_once('lib/nusoap.php');
 include_once('Entidades/BD.php');
+include_once('Errores/usuarioError.php');
 
 $servicio= new soap_server();
 
@@ -15,9 +16,13 @@ $servicio->register("signup",
                     $ns,'','','',"Size:Nombre(64), correo(255), password(32), dni(8)");
 
 function signup($nombre,$correo,$clave,$dni){
- $usuario= new Usuario();
- $usuario->crear($nombre,md5($clave),$correo,$dni);
-	return "Se ha registrado a $nombre con correo $correo";
+  $usuario= new Usuario();
+  $error= new Error();
+  if ($sms = $error->validar($correo,$dni)){
+   return $sms;
+  }
+  $usuario->crear($nombre,md5($clave),$correo,$dni);
+	 return "Se ha registrado a $nombre con correo $correo";
 }
 
 //$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';

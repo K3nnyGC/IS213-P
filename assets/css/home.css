@@ -206,7 +206,6 @@ footer {
    color: white;
    margin: 0%;
    padding: 1%;
-   font-size: 120%;
    margin-top: 5%;
    font-family: "Source Code Pro", monospace;
    font-size: 130%;
@@ -214,4 +213,5 @@ footer {
 
 footer div p {
    padding-left: 2%;
+   text-align: justify;
 }

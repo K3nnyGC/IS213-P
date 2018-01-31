@@ -1,8 +1,8 @@
 <?php
-$nombre=$_POST['nombre'];
-$correo=$_POST['correo'];
-$password=$_POST['password'];
-$dni=$_POST['dni'];
+$nombre="Bobby4";
+$correo="underrat@wau.wau";
+$password="45372345";
+$dni="45372833";
 include_once('lib/nusoap.php');
 $cliente = new nusoap_client("https://php1-kennygonzales.c9users.io/ws/registro.php",false);
 
@@ -15,8 +15,5 @@ if (isset($respuesta['faultstring'])){
 } else {
     echo $respuesta;
 }
-
-//var_dump("$nombre $correo");
-//var_dump($_POST);
 
 ?>
