@@ -71,6 +71,59 @@ $("#btn-enviar").click(function() {
 });
 
 
+$("#btn-enviar2").click(function() {
+    var error=false;
+    $("#msg-mail2").html( "<br>" );
+    $("#msg-password2").html( "<br>" );
+    $(this).html( "<i class='fa fa-spinner fa-spin fa-1x fa-fw'></i>Enviando..." );
+    var urlser = 'https://mailjagger.ga/api/validate/'+document.formulario2.correo.value; //url servicio
+    urlser='https://apilayer.net/api/check?access_key=1263ca9fcc8ce212bedcf6c2e2459951&email='+document.formulario2.correo.value+'&callback=CALLBACK_FUNCTION';
+    var datosjs = {
+      };
+      
+     $.ajax({
+          type: "get",
+          url: urlser,
+          timeout: 8000,
+          dataType: "jsonp",
+          success: function(data){
+              console.log(data);
+              
+                if (data.format_valid == true){
+                    
+                } else {
+                    $("#msg-mail2").html( "Error! El correo no es valido" );
+                    $("#msg-mail2").fadeIn("slow");
+                    error=true;
+                }
+
+                if (document.formulario2.correo.value == ""){
+                    $("#msg-mail2").html( "Este campo no puede quedar vacio" );
+                    $("#msg-mail2").fadeIn("slow");
+                    error=true;
+                }
+                if (document.formulario2.password.value == ""){
+                    $("#msg-password2").html( "Este campo no puede quedar vacio" );
+                    $("#msg-password2").fadeIn("slow");
+                    error=true;
+                }
+
+
+                if (error==true){
+                    $("#btn-enviar2").html( "Enviar" );
+                } else {
+                    document.formulario2.submit();
+                    
+                }
+              
+              
+          }
+      });
+});
+
+
+
+
 $("#b-login").click(function() {
     $("#sombra").show();
     $("#img-centro").toggleClass("sombra");

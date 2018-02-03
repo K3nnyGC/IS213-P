@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Almendra|Lemon|Amatic+SC|Orbitron|Catamaran|Source+Code+Pro');
+
+body{
+   
+}
+
+.left {
+   width: 16%;
+   margin: 0%;
+   height: 100%;
+   position: absolute;
+   left: 0%;
+   background-image: url("https://fsb.zobj.net/crop.php?r=zNYPpC6P5yYSQXD-eRfdKkr-5GavVqrYccZ-M8ZrcowBGgKHoJKE69UWGL-GcJVAuoXP8UL0aAfuZUg5IZMrusw0GSRHdFVZHPoT4OjRoXkX_5_fKvK3dF0RtUmFf0Dpxx8ebYeXOPqCiVCd2D_et3_4JMxwfieiT9wL8A");
+   
+}
+
+.right {
+   width: 83%;
+   margin: 0%;
+   height: 100%;
+   position: absolute;
+   left: 16%;
+}
+
+.menu {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   margin-right: 0%;
+   padding-right: 0%;
+   width: 100%;
+}
+
+.menu ul {
+   color: white;
+   font-weight: bold;
+   list-style: none;
+   margin-left: 5%;
+   margin-right: 0%;
+   padding-right: 0%;
+}
+
+.menu ul li{
+   margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 1%;
+    background-color: #438172;
+    padding-left: 2%;
+    margin-right: 0%;
+   padding-right: 0%;
+}
+
+li:hover {
+   background-color: white !important;
+   margin-right: -5% !important;
+   border-radius: 0% 20% 20% 0%;
+   text-align: right;
+   padding-right: 5% !important;
+   color: #2d6356;
+   
+}

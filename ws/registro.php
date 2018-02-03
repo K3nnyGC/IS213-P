@@ -10,6 +10,7 @@ $ns="urn:regsitrowsdl";
 $servicio->configureWSDL("Servicio de Registro en Intranet",$ns);
 $servicio->schemaTargetNamespace = $ns;
 
+//Metodo 1
 $servicio->register("signup",
                     array('nombre' => 'xsd:string','correo' => 'xsd:string','password' => 'xsd:string','dni' => 'xsd:string' ),
                     array('return' => 'xsd:string'),
@@ -23,6 +24,22 @@ function signup($nombre,$correo,$clave,$dni){
   }
   $usuario->crear($nombre,md5($clave),$correo,$dni);
 	 return "Se ha registrado a $nombre con correo $correo";
+}
+
+//Metodo 2
+$servicio->register("login",
+                    array('correo' => 'xsd:string','password' => 'xsd:string' ),
+                    array('return' => 'xsd:string'),
+                    $ns,'','','',"");
+
+function login($correo,$clave){
+  $usuario= new Usuario();
+  $error= new Error();
+  if ($sms = $error->validarLogeo($correo,md5($clave))){
+   return $sms;
+  }
+  $usuario->logear($correo,md5($clave));
+	 return "Usuario en linea!";
 }
 
 //$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';

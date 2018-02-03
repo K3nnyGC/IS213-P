@@ -5496,6 +5496,11 @@ class wsdl extends nusoap_base {
 					$cliente = new nusoap_client("url del servicio",false);<br>
 					$parametros = array("parametro1" => valor1,"parametro2" => valor2,... );<br>
 					$respuesta = $cliente->call("metodo",$parametros);<br>
+					if (isset($respuesta["faultstring"])){<br>
+    				&nbsp;&nbsp;	echo $respuesta["faultstring"];<br>
+					&nbsp;&nbsp;	} else {<br>
+    				&nbsp;&nbsp;	echo $respuesta;<br>
+					}
 				</code>
 			</div>
 		</div></body></html>';

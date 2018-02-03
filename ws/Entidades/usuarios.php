@@ -6,6 +6,21 @@ class Usuario extends BD {
         $query = "INSERT INTO t_usuario (id_user, no_user, co_password, tx_email, co_dni) VALUES ('','$nombre', '$clave','$correo','$dni')";
 	    $result = $db->query($query);    
     }
+    
+    public function mostrar ($correo){
+        $db = $this->iniciar();
+        $query = "SELECT * FROM t_usuario WHERE tx_email='$correo'";
+	    $result = $db->query($query);
+	    return $result->fetch_array(MYSQLI_ASSOC);
+    }
+    
+    public function logear ($correo,$clave){
+        $db = $this->iniciar();
+        $query = "SELECT * FROM t_usuario WHERE tx_email='$correo' AND co_password='$clave'";
+	    $result = $db->query($query);
+	    $_SESSION['usuario'] = $result->fetch_array(MYSQLI_ASSOC);
+	    $_SESSION['pagina']=3;
+    }
      
 }
 

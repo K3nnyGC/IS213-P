@@ -4,8 +4,8 @@
         <title>
             MySchool
         </title>
-        <LINK REL=StyleSheet HREF='../assets/css/home.css' TYPE='text/css' MEDIA=screen>
-        <LINK REL=StyleSheet HREF='../assets/css/home-r.css' TYPE='text/css' MEDIA=screen>
+        <LINK REL=StyleSheet HREF='../assets/css/principal.css' TYPE='text/css' MEDIA=screen>
+        
         <link rel="icon" type="image/png" href="https://icon-icons.com/icons2/215/PNG/128/baby-boy256_25254.png" />
         <link rel='stylesheet' href='../assets/css/css/font-awesome.min.css'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -19,20 +19,13 @@
 	    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script> 
     </head>
     <body>
-        <?php 
-            if (isset($_SESSION['error'])){
-        ?>        
-            <div class="alert alert-danger alert-dismissable fade in">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <?php
-            echo $_SESSION['error'];
-            unset($_SESSION['error']);
-            echo "</div>";
-            }
-        ?>
-            
-        
-        <?php include_once($pagina); ?>
+        <div class="left">
+            <?php include_once("partes/menu.php"); ?>
+        </div>
+        <div class="right">
+            <?php include_once($pagina); ?>
+        </div>
+        <script type='text/javascript' src='../assets/js/principal.js'></script>
     </body>
-    
+
 </html>

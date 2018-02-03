@@ -4,21 +4,19 @@ setlocale(LC_TIME, "es_ES.utf8");
 date_default_timezone_set('America/Lima');
 session_start(['cookie_lifetime' => 86400,]);
 
-
-$nombre=$_POST['nombre'];
 $correo=$_POST['correo'];
 $password=$_POST['password'];
-$dni=$_POST['dni'];
+
 include_once('lib/nusoap.php');
 include_once('Entidades/BD.php');
 $cliente = new nusoap_client("https://php1-kennygonzales.c9users.io/ws/registro.php",false);
 
-$parametros = array('nombre' => $nombre,'correo' => $correo,'password' => $password,'dni' => $dni );
+$parametros = array('correo' => $correo,'password' => $password);
 
-$respuesta = $cliente->call("signup",$parametros);
+$respuesta = $cliente->call("login",$parametros);
 
 if (isset($respuesta['faultstring'])){
-    echo $_SESSION['error']=$respuesta['faultstring'];
+    $_SESSION['error']=$respuesta['faultstring'];
     $_SESSION['pagina']=0;
 } else {
     $usuario= new Usuario();
