@@ -42,6 +42,22 @@ function login($correo,$clave){
 	 return "Usuario en linea!";
 }
 
+//Metodo 3
+$servicio->register("edit",
+                    array('correo' => 'xsd:string','nombre' => 'xsd:string','telefono' => 'xsd:string','direccion' => 'xsd:string' ),
+                    array('return' => 'xsd:string'),
+                    $ns,'','','',"");
+
+function edit($correo,$nombre,$telefono,$direccion){
+  $usuario= new Usuario();
+  $error= new Error();
+  if ($sms = $error->validarExistencia($correo)){
+   return $sms;
+  }
+  $usuario->editar($correo,$nombre,$telefono,$direccion);
+    return "Usuario actualizado!";
+}
+
 //$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
 //$servicio->service($HTTP_RAW_POST_DATA);
 

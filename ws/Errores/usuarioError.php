@@ -37,7 +37,7 @@
 	        if ($line = $result->fetch_assoc()){
 	            return false;
 	        } else {
-	            return new soap_fault('-1', 'CORREO', 'Este Correo no esta registrado!','');
+	            return new soap_fault('-1', 'CORREO', "Este Correo no esta registrado $correo !",'');
 	        }
             
         }

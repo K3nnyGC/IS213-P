@@ -21,6 +21,12 @@ class Usuario extends BD {
 	    $_SESSION['usuario'] = $result->fetch_array(MYSQLI_ASSOC);
 	    $_SESSION['pagina']=3;
     }
+    
+    public function editar($correo,$nombre,$telefono,$direccion){
+        $db = $this->iniciar();
+        $query="UPDATE  t_usuario SET tx_telefono = '$telefono', no_user = '$nombre', tx_direccion = '$direccion' WHERE tx_email='$correo'";
+	    $result = $db->query($query);    
+    }
      
 }
 
