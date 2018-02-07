@@ -1,6 +1,10 @@
-$("#salir").click(function() {
-    document.salir.submit();
-});
+$("#salir").click(function() { document.salir.submit(); });
+$("#inicio").click(function() { document.inicio.submit(); });
+$("#perfil").click(function() { document.perfil.submit(); });
+$("#notas").click(function() { document.notas.submit(); });
+$("#horarios").click(function() { document.horarios.submit(); });
+$("#pagos").click(function() { document.pagos.submit(); });
+$("#deudas").click(function() { document.deudas.submit(); });
 
 $("#boton-datos").click(function() {
     var error=false;

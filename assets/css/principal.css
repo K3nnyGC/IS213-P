@@ -80,7 +80,7 @@ li:hover {
    background-repeat: no-repeat;
 }
 
-.tabla-datos form p{
+.tabla-datos form p, .tabla-datos p{
    color: #2d6356;
    font-size: 150%;
    margin-bottom: 3%;
@@ -121,6 +121,19 @@ li:hover {
    background-color: lightgray;
    cursor: not-allowed;
 }
+
+/*notas*/
+.tabla-notas{
+   
+}
+
+/*horarios*/
+.tabla-horarios{
+   
+}
+
+
+
 
 .xdebug-var-dump:hover {
    opacity: 0;
