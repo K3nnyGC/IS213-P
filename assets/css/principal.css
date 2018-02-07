@@ -63,7 +63,7 @@ li:hover {
    /*text-align: right;*/
    padding-right: 5% !important;
    color: #2d6356;
-   
+   cursor: pointer;
 }
 
 .xdebug-var-dump{
@@ -132,9 +132,177 @@ li:hover {
    
 }
 
+/*pagos*/
+.tabla-pagos{
+   
+}
+
+/*deudas*/
+.tabla-deudas{
+   
+}
+
+.tabla-deudas-deuda{
+   padding: 2%;
+   margin: 3%;
+   background-color: #e6f3dd;
+   border-radius: 5px;
+   width: 50%;
+   /*margin-left: 15%;*/
+   
+}
+
+.tabla-deudas-deuda div{
+   /*color: white;*/
+   width: 49%;
+   display: inline-block;
+}
+
+.concepto{
+   
+}
+
+.fecha{
+   text-align: right;
+   margin-bottom: 5%;
+}
+
+.monto{
+   width: 100% !important;
+   text-align: center;
+}
+
+.monto i{
+   color: gold;
+}
+
+.boton-pago{
+   text-align: center;
+   width: 50%;
+   background-color: gold;
+   border-radius: 5px;
+   color: black;
+   font-size: 120%;
+   font-weight: bold;
+   cursor: pointer;
+   display: inline-block;
+   margin-left: 25%;
+   margin-top: 3%;
+}
+
+/*pagos*/
+
+.payment{
+   display: none;
+   background-repeat: no-repeat;
+   
+}
+
+.payment div p{
+   text-align: center !important;
+   padding: 1% !important;
+   margin-bottom: 3% !important;
+   /* margin-top: -2%; */
+   font-size: 150% !important;
+   font-weight: bold !important;
+   font-family: 'Catamaran', sans-serif !important;
+   color: #c55f84 !important;
+   
+}
+
+.home-1{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-image: url("../img/cPlomo.png");
+   top: 0px;
+   left: 0px;
+   display: none;
+}
+
+.cerrar{
+   top: 50px;
+   position: absolute;
+   font-size: 200%;
+   left: 90%;
+   color: grey;
+   cursor: pointer;
+}
 
 
+#btn-enviar-pago{
+   text-align: center;
+   width: 50%;
+   background-color: gold;
+   border-radius: 5px;
+   color: black;
+   font-size: 120%;
+   font-weight: bold;
+   cursor: pointer;
+   display: inline-block;
+}
+
+
+
+#payment{
+   width: 30%;
+   /*background-color: whitesmoke;*/
+   color: black;
+   padding: 1%;
+   margin: 5%;
+   text-align: center;
+   /*display: inline-block;*/
+   background-image: url("../img/papel.png");
+   background-size: 100% auto;
+   padding-top: 8%;
+   padding-left: 5%;
+   position: fixed;
+   left: 30%;
+   top: 10%;
+}
+
+#payment p {
+   text-align: left;
+   padding-left: 5%;
+   font-family: 'Almendra', sans-serif;
+   margin-bottom: 0px;
+}
+
+#payment input {
+   width: 80%;
+   border-radius: 5px;
+   margin-bottom: 1%;
+}
+
+/*Noticias*/
+
+.tabla-noticias{
+   
+}
+
+.noticias{
+   
+}
+
+.noticias-img{
+   margin: 3%;
+   
+}
+
+.noticias-titulo{
+   padding-left: 5%;
+   font-size: 150% !important;
+   
+}
+
+.noticias-contenido{
+   padding-left: 10%;
+   font-size: 100% !important;
+   text-align: justify;
+   font-weight: 100 !important;
+}
 
 .xdebug-var-dump:hover {
    opacity: 0;
 }
+

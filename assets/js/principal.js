@@ -33,3 +33,8 @@ $("#boton-datos").click(function() {
         document.datos.submit();
     }
 });
+
+$("#cerrar").click(function() {
+    $("#sombra").fadeOut();
+    $("#payment").slideToggle("low");
+});
