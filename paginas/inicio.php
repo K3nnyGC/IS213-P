@@ -1,22 +1,23 @@
 <?php
-$data=[
-    [
-        'titulo' => "Verano 2018",
-        'imagen' => 'https://img.imagenescool.com/ic/th/200x200/verano/verano_014.jpg',
-        'contenido' => "Matriculate en las clases de verano para el 2018 ocupa tu tiempo libre adelantando cursos o nivelando alguna materia problematica."
-        ],
-    [
-        'titulo' => "Verano 2018",
-        'imagen' => 'https://img.imagenescool.com/ic/th/200x200/verano/verano_014.jpg',
-        'contenido' => "Matriculate en las clases de verano para el 2018 ocupa tu tiempo libre adelantando cursos o nivelando alguna materia problematica."
-        ],
-    [
-        'titulo' => "Verano 2018",
-        'imagen' => 'https://img.imagenescool.com/ic/th/200x200/verano/verano_014.jpg',
-        'contenido' => "Matriculate en las clases de verano para el 2018 ocupa tu tiempo libre adelantando cursos o nivelando alguna materia problematica."
-        ]
+// $data=[
+//     [
+//         'titulo' => "Verano 2018",
+//         'imagen' => 'https://img.imagenescool.com/ic/th/200x200/verano/verano_014.jpg',
+//         'contenido' => "Matriculate en las clases de verano para el 2018 ocupa tu tiempo libre adelantando cursos o nivelando alguna materia problematica."
+//         ],
+//     [
+//         'titulo' => "Verano 2018",
+//         'imagen' => 'https://img.imagenescool.com/ic/th/200x200/verano/verano_014.jpg',
+//         'contenido' => "Matriculate en las clases de verano para el 2018 ocupa tu tiempo libre adelantando cursos o nivelando alguna materia problematica."
+//         ],
+//     [
+//         'titulo' => "Verano 2018",
+//         'imagen' => 'https://img.imagenescool.com/ic/th/200x200/verano/verano_014.jpg',
+//         'contenido' => "Matriculate en las clases de verano para el 2018 ocupa tu tiempo libre adelantando cursos o nivelando alguna materia problematica."
+//         ]
 
-]
+// ]
+$data=$_SESSION['noticias'];
 ?>
 
 <div class="tabla-datos">

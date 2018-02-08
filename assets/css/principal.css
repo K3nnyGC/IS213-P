@@ -284,6 +284,10 @@ li:hover {
    
 }
 
+.noticias table{
+   width: 80%;
+}
+
 .noticias-img{
    margin: 3%;
    
