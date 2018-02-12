@@ -12,9 +12,17 @@ if ($salir) {
     $_SESSION['pagina']=$_POST['pagina'];
 }
 
-if($_SESSION['pagina']==2){
- header("Location:https://php1-kennygonzales.c9users.io/ws/clienteNoticia.php");    
-} else {
- header("Location:https://php1-kennygonzales.c9users.io");  
+switch ($_SESSION['pagina']) {
+    case 2:
+        header("Location:https://php1-kennygonzales.c9users.io/ws/clienteNoticia.php"); 
+        break;
+    case 4:
+        header("Location:https://php1-kennygonzales.c9users.io/ws/clienteNotas.php"); 
+        break;
+    default:
+        header("Location:https://php1-kennygonzales.c9users.io"); 
+        break;
 }
+
+
 ?>
