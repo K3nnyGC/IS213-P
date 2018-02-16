@@ -34,6 +34,18 @@
                     echo "</div>";
                 }
             ?>
+            <?php 
+                if (isset($_SESSION['ok'])){
+            ?>        
+            <div class="alert alert-success alert-dismissable fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <?php
+                    echo $_SESSION['ok'];
+                    unset($_SESSION['ok']);
+                    echo "</div>";
+                }
+            ?>
+            
             <?php include_once($pagina); ?>
         </div>
         <script type='text/javascript' src='../assets/js/principal.js'></script>

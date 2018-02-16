@@ -24,6 +24,7 @@ if (isset($respuesta['faultstring'])){
     $usuario= new Usuario();
     $_SESSION['usuario']=$usuario->mostrar($correo);
     $_SESSION['pagina']=3;
+    $_SESSION['ok']="Datos Actualizados!";
     //var_dump($usuario->mostrar($dni));
 }
 header("Location:https://php1-kennygonzales.c9users.io");

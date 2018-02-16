@@ -1,9 +1,9 @@
 <div class="tabla-datos">
     <form name="datos" action="ws/clienteEditar.php" METHOD='POST'>
     <p>PERFIL</p>
-    <div>Nombre</div><input name="nombre" type="text" value="<?php echo $_SESSION['usuario']['no_user']; ?>"/>
+    <div>Nombre</div><input class="nulo" name="nombre" type="text" value="<?php echo $_SESSION['usuario']['no_user']; ?>" readonly/>
     <p id="td-nombre" class="tabla-datos-error"><br></p>
-    <div>Correo</div><input class="nulo" name="correo" type="text" value="<?php echo $_SESSION['usuario']['tx_email']; ?>" readonly/>
+    <div>Correo</div><input name="correo" type="text" value="<?php echo $_SESSION['usuario']['tx_email']; ?>" />
     <p id="td-correo" class="tabla-datos-error"><br></p>
     <div>DNI</div><input class="nulo" type="text"  value="<?php echo $_SESSION['usuario']['co_dni']; ?>" readonly/>
     <p id="td-dni" class="tabla-datos-error"><br></p>

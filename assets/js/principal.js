@@ -5,6 +5,7 @@ $("#notas").click(function() { document.notas.submit(); });
 $("#horarios").click(function() { document.horarios.submit(); });
 $("#pagos").click(function() { document.pagos.submit(); });
 $("#deudas").click(function() { document.deudas.submit(); });
+$("#consultas").click(function() { document.consultas.submit(); });
 
 $("#boton-datos").click(function() {
     var error=false;
@@ -37,4 +38,21 @@ $("#boton-datos").click(function() {
 $("#cerrar").click(function() {
     $("#sombra").fadeOut();
     $("#payment").slideToggle("low");
+});
+
+
+$("#btn-enviar-pago").click(function() {
+    var error=false;
+    $("#btn-enviar-pago").html( "<i class='fa fa-spinner fa-spin fa-1x fa-fw'></i>Enviando..." );
+    $("#msg-ncard").html( "<br>" );
+    if (document.pago.tarjeta.value == ""){
+        $("#msg-ncard").html( "Este campo no puede quedar vacio" );
+        $("#msg-ncard").fadeIn("slow");
+        error=true;
+    }
+    if (error==true){
+        $("#btn-enviar-pago").html( "Enviar" );
+    } else {
+        document.pago.submit();
+    }
 });

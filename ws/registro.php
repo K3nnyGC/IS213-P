@@ -51,7 +51,7 @@ $servicio->register("edit",
 function edit($correo,$nombre,$telefono,$direccion){
   $usuario= new Usuario();
   $error= new Error();
-  if ($sms = $error->validarExistencia($correo)){
+  if ($sms = $error->validarCambioCorreo($correo,$nombre)){
    return $sms;
   }
   $usuario->editar($correo,$nombre,$telefono,$direccion);

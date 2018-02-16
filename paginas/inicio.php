@@ -31,7 +31,7 @@ $data=$_SESSION['noticias'];
                 <div class="noticias">
                 <table>
                     <tr>
-                        <td>
+                        <td style="width:30%;">
                             <div class="noticias-img"><img src="<?php echo $data[$i]['imagen']; ?>" /></div>
                         </td>
                         <td>

@@ -36,6 +36,12 @@
             </form>
             Deudas
         </li>
+        <li id="consultas">
+            <form name="consultas" action="utils/accion.php" style="display:none;"  METHOD="POST">
+                <input name="pagina" value="8"/>
+            </form>
+            Consultas
+        </li>
         <li id="salir">
             <form name="salir" action="utils/accion.php" style="display:none;" METHOD="POST">
                 <input name="salir" value="1"/>

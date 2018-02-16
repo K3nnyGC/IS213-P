@@ -1,7 +1,7 @@
 $("#btn-enviar").click(function() {
     var error=false;
     $("#msg-mail").html( "<br>" );
-    $("#msg-name").html( "<br>" );
+    //$("#msg-name").html( "<br>" );
     $("#msg-password").html( "<br>" );
     $("#msg-password2").html( "<br>" );
     $(this).html( "<i class='fa fa-spinner fa-spin fa-1x fa-fw'></i>Enviando..." );
@@ -32,11 +32,11 @@ $("#btn-enviar").click(function() {
                     $("#msg-password").fadeIn("slow");
                     error=true;
                 }
-                if (document.formulario.nombre.value == ""){
-                    $("#msg-name").html( "Este campo no puede quedar vacio" );
-                    $("#msg-name").fadeIn("slow");
-                    error=true;
-                }
+                //if (document.formulario.nombre.value == ""){
+                  //  $("#msg-name").html( "Este campo no puede quedar vacio" );
+                   // $("#msg-name").fadeIn("slow");
+                    //error=true;
+                //}
                 if (document.formulario.correo.value == ""){
                     $("#msg-mail").html( "Este campo no puede quedar vacio" );
                     $("#msg-mail").fadeIn("slow");

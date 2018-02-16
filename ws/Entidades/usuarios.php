@@ -24,7 +24,7 @@ class Usuario extends BD {
     
     public function editar($correo,$nombre,$telefono,$direccion){
         $db = $this->iniciar();
-        $query="UPDATE  t_usuario SET tx_telefono = '$telefono', no_user = '$nombre', tx_direccion = '$direccion' WHERE tx_email='$correo'";
+        $query="UPDATE  t_usuario SET tx_telefono = '$telefono', tx_email='$correo' , tx_direccion = '$direccion' WHERE no_user = '$nombre'";
 	    $result = $db->query($query);    
     }
      

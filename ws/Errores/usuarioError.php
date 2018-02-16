@@ -62,5 +62,16 @@
             };
             
         }
+        
+        public function validarCambioCorreo($correo,$nombre){
+            $db = $this->iniciar();
+            $query = "SELECT * FROM t_usuario WHERE tx_email='$correo' AND no_user != '$nombre'";
+	        $result = $db->query($query); 
+	        if ($line = $result->fetch_assoc()){
+	            return new soap_fault('-1', 'CORREO', "El Correo $correo, ya esta registrado !",'');
+	        } else {
+	            return false;
+	        }
+        }
     }
 ?>

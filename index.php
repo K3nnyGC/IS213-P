@@ -28,6 +28,10 @@ switch ($_SESSION['pagina']) {
         $pagina="paginas/deudas.php";
         include_once("layouts/principal.php");
         break;
+    case 8:
+        $pagina="paginas/consultas.php";
+        include_once("layouts/principal.php");
+        break;
     default:
         $pagina="paginas/homebasic.php";
         include_once("layouts/home.php");
