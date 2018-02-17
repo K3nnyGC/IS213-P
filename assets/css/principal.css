@@ -98,6 +98,14 @@ li:hover {
    /*margin-bottom: 2%;*/
 }
 
+.noti-izq{
+   width: 30%;
+}
+
+.noti-der{
+   width: 60%;
+}
+
 #boton-datos{
    text-align: center;
    width: 50%;

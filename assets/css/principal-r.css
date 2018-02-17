@@ -1,2 +1,89 @@
-@media screen and (max-width: 400px) {
+.navbar{
+   margin-bottom: 0% !important;
 }
+
+.oculto{
+   display: none;
+}
+
+.navverde{
+   background-color: #2d6356 !important;
+}
+
+
+.navbar-brand {
+   color: white !important;
+}
+
+.fondo{
+   
+}
+
+.item-menu {
+   color: white !important;
+}
+
+@media screen and (max-width: 600px) {
+   
+   .right{
+      width: 100%;
+      position: unset;
+      left: 0%;
+   }
+   
+   .left{
+      display: none;
+      left: unset;
+   }
+   
+   .oculto{
+   display: block;
+   }
+   
+   li:hover {
+   background-color: white !important;
+   margin-right: 0% !important;
+   border-radius: 0% 0% 0% 0%;
+   /*text-align: right;*/
+   padding-right: 0% !important;
+   color: #438172 !important;
+   cursor: pointer;
+   }
+   
+   li a:hover{
+      color: #438172 !important;
+   }
+   
+   .tabla-datos{
+      margin: 0%;
+   }
+   
+   .noticias table {
+    width: 100%;
+   }
+   
+   .tabla-datos form div{
+   width: 100%;
+   display: inherit;
+   }
+
+   .tabla-datos form input{
+   width: 100%;
+   border-radius: 5px;
+   /*margin-bottom: 2%;*/
+   }
+   
+   .tabla-deudas-deuda{
+      width: inherit;
+   }
+   
+   #payment{
+      width: 80%;
+      left: 8%;
+      padding-top: 20%;
+      padding-bottom: 5%;
+      
+   }
+
+}
+

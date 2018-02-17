@@ -31,10 +31,10 @@ $data=$_SESSION['noticias'];
                 <div class="noticias">
                 <table>
                     <tr>
-                        <td style="width:30%;">
-                            <div class="noticias-img"><img src="<?php echo $data[$i]['imagen']; ?>" /></div>
+                        <td class="noti-izq">
+                            <div><img  class="noticias-img" src="<?php echo $data[$i]['imagen']; ?>" /></div>
                         </td>
-                        <td>
+                        <td class="noti-der">
                             <p class="noticias-titulo"><?php echo $data[$i]['titulo']; ?></p>
                             <p class="noticias-contenido"><?php echo $data[$i]['contenido']; ?></p>
                             

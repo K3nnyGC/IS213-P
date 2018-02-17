@@ -7,6 +7,15 @@ $("#pagos").click(function() { document.pagos.submit(); });
 $("#deudas").click(function() { document.deudas.submit(); });
 $("#consultas").click(function() { document.consultas.submit(); });
 
+$("#salir2").click(function() { document.salir.submit(); });
+$("#inicio2").click(function() { document.inicio.submit(); });
+$("#perfil2").click(function() { document.perfil.submit(); });
+$("#notas2").click(function() { document.notas.submit(); });
+$("#horarios2").click(function() { document.horarios.submit(); });
+$("#pagos2").click(function() { document.pagos.submit(); });
+$("#deudas2").click(function() { document.deudas.submit(); });
+$("#consultas2").click(function() { document.consultas.submit(); });
+
 $("#boton-datos").click(function() {
     var error=false;
     $("#boton-datos").html( "<i class='fa fa-spinner fa-spin fa-1x fa-fw'></i>Enviando..." );

@@ -45,7 +45,7 @@ $cursos=[
         </ul>
         <div class="tab-content">
             <?php for($i=0;$i< count($data);$i++){ ?>
-            <div id="a<?php echo $i;?>" class="tab-pane fade <?php echo $i == 0 ? "in active" : ""; ?>">
+            <div id="a<?php echo $i;?>" class="tab-pane fade <?php echo $i == 0 ? "in active" : ""; ?> table-responsive">
             
                 <table class="table table-striped">
                     <thead>
