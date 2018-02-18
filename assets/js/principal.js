@@ -65,3 +65,37 @@ $("#btn-enviar-pago").click(function() {
         document.pago.submit();
     }
 });
+
+$("#btn-enviar3").click(function() {
+    var error=false;
+    $("#asunto-error").html( "" );
+    $("#mensaje-error").html( "" );
+    if($("#campo-asunto").val()==""){
+        error=true;
+        $("#asunto-error").html( "Este campo no puede estar vacio!" );
+    }
+    if($("#campo-texto").val()==""){
+        error=true;
+        $("#mensaje-error").html( "Este campo no puede estar vacio!" );
+    }
+    if (error){
+    }else{
+    $("#btn-enviar3").html( "<i class='fa fa-spinner fa-spin fa-1x fa-fw'></i>Enviando..." );
+    var form = document.createElement( "form" );
+	form.setAttribute( "name", "comentarioform" );
+	form.setAttribute( "action", "/ws/clienteConsultasCrear.php" );
+	form.setAttribute( "method", "POST" );
+	var input = document.createElement( "input" );
+	input.setAttribute( "name", "asunto" );
+	input.setAttribute( "type", "hidden" );
+	input.setAttribute( "value", $("#campo-asunto").val() );
+	var input2 = document.createElement( "input" );
+	input2.setAttribute( "name", "mensaje" );
+	input2.setAttribute( "type", "hidden" );
+	input2.setAttribute( "value", $("#campo-texto").val() );
+	form.appendChild( input );
+	form.appendChild( input2 );
+	document.getElementsByTagName( "body" )[0].appendChild( form );
+	document.comentarioform.submit();
+    }
+});

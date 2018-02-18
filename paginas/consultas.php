@@ -68,26 +68,33 @@ $data=$_SESSION['consultas'];
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>FECHA</th>
-                            <th>ASUNTO</th>
+                            <th>
+                                ASUNTO
+                                <div id="asunto-error"></div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
 
                             <tr>
                                 <td>
-                                    <input class="fecha-s" type="date"/>
+                                    <input id="campo-asunto" class="asunto-s" type="text"/>
                                 </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    MENSAJE
+                                    <div id="mensaje-error"></div>
+                                </th>
+                            </tr>
+                            <tr>
                                 <td>
-                                    <input class="asunto-s" type="text"/>
+                                    <textarea id="campo-texto" class="texto-s"></textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <th COLSPAN=2>MENSAJE</th>
-                            </tr>
-                            <tr>
-                                <td COLSPAN=2>
-                                    <textarea  class="texto-s"></textarea>
+                                <td>
+                                    <div id="btn-enviar3">Enviar</div>
                                 </td>
                             </tr>
 

@@ -5,7 +5,7 @@ session_start(['cookie_lifetime' => 86400,]);
 
 $tarjeta=$_POST['tarjeta'];
 $monto=$_POST['monto'];
-
+$_SESSION['iddeuda']=$_POST['iddeuda'];
 
 //////////////////////
 $curl = curl_init();
@@ -36,14 +36,16 @@ $obj=json_decode($response);
 if (isset($obj->message)){
     $_SESSION['error']=$obj->message;
     $_SESSION['pagina']=7;
+    header("Location:https://php1-kennygonzales.c9users.io");
 } else {
-    $_SESSION['ok']="Pago exitoso, su banco reporta un saldo de: " .$obj->saldo;
+    $_SESSION['ok']="Pago exitoso, su banco reporta un saldo de: " .$obj->saldo . " soles.";
     $_SESSION['pagina']=6;
+    header("Location:https://php1-kennygonzales.c9users.io/ws/clienteCancelarDeuda.php");
 }
 
 //var_dump($obj);
 //var_dump($_POST)
 
-header("Location:https://php1-kennygonzales.c9users.io");
+
 
 ?>

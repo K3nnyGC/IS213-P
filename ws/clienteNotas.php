@@ -7,7 +7,7 @@ session_start(['cookie_lifetime' => 86400,]);
 $url = "http://clarolyn-001-site1.dtempurl.com/Calificaciones.svc?wsdl";
 try {
  $client = new SoapClient($url, [ "trace" => 1 ] );
- $result = $client->ListaCalificaciones( [ "padre" => 9, "licenseKey" => "0" ] );
+ $result = $client->ListaCalificaciones( [ "padre" => $_SESSION['usuario']['id_user'], "licenseKey" => "0" ] );
  //var_dump($result->ListaCalificacionesResult->Calificacion);
 } catch ( SoapFault $e ) {
  //echo $e->getMessage();

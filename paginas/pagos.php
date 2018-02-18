@@ -1,25 +1,27 @@
 <?php
-$data=[
-    [
-        'id' => 1023,
-        'concepto' => 'Pension Febrero',
-        'monto' => 1250,
-        'fecha' => "28/01/2018"
-        ],
-    [
-        'id' => 1050,
-        'concepto' => 'Pension Enero',
-        'monto' => 1250,
-        'fecha' => "28/12/2017"
-        ],
-    [
-        'id' => 1128,
-        'concepto' => 'Pension Diciembre',
-        'monto' => 1250,
-        'fecha' => "28/11/2017"
-        ],
+// $data=[
+//     [
+//         'id' => 1023,
+//         'concepto' => 'Pension Febrero',
+//         'monto' => 1250,
+//         'fecha' => "28/01/2018"
+//         ],
+//     [
+//         'id' => 1050,
+//         'concepto' => 'Pension Enero',
+//         'monto' => 1250,
+//         'fecha' => "28/12/2017"
+//         ],
+//     [
+//         'id' => 1128,
+//         'concepto' => 'Pension Diciembre',
+//         'monto' => 1250,
+//         'fecha' => "28/11/2017"
+//         ],
 
-]
+// ];
+
+$data=$_SESSION['deudas'];
 ?>
 
 <div class="tabla-datos">
@@ -38,14 +40,15 @@ $data=[
                             <th>#Pago</th>
                             <th>CONCEPTO</th>
                             <th>MONTO</th>
-                            <th>FECHA</th>
+                            <th>ESTADO</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php for($i=0;$i< count($data);$i++){ ?>
+                            <?php if ($data[$i]['pagado']==true){ ?>
                             <tr>
                                 <td>
-                                    <?php echo $data[$i]['id']; ?>
+                                    <?php echo "MS0".$data[$i]['idDeuda']; ?>
                                 </td>
                                 <td>
                                     <?php echo $data[$i]['concepto']; ?>
@@ -54,10 +57,12 @@ $data=[
                                     <?php echo $data[$i]['monto']; ?>
                                 </td>
                                 <td>
-                                    <?php echo $data[$i]['fecha']; ?>
+                                    <?php echo "CANCELADO"; ?>
                                 </td>
                             </tr>
-                        <?php } ?>
+                        <?php 
+                                }
+                            } ?>
                     </tbody>
                 </table>
             </div>

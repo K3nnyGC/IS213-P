@@ -4,6 +4,10 @@ setlocale(LC_TIME, "es_ES.utf8");
 date_default_timezone_set('America/Lima');
 session_start(['cookie_lifetime' => 86400,]);
 
+$asunto=$_POST['asunto'];
+$descripcion=$_POST['mensaje'];
+$usuario=$_SESSION['usuario']['id_user'];
+
 $url = "http://evelynross-001-site1.htempurl.com/ServicioVarios.svc?wsdl";
 try {
  $client = new SoapClient($url, [ "trace" => 1 ] );
@@ -11,25 +15,15 @@ try {
      'oContactoBE'=>[
          'asunto' => $asunto,
          'descripcion' => $descripcion,
-         'fechaCreacion' => $fecha,
-         'idItem' => $id_item,
          'idUsuario'=> $usuario
          ]
      ] );
  //var_dump($result->ListaCalificacionesResult->Calificacion);
 } catch ( SoapFault $e ) {
- //echo $e->getMessage();
-}
-
-$array=[];
-$resultadoA=$result->getConsultasResult->ContactoBE;
-for ($i=0;$i<count($resultadoA);$i++){
-    $array[]=['fecha'=>$resultadoA[$i]->fechaCreacion,
-        'motivo'=>$resultadoA[$i]->asunto,
-        'asunto'=>$resultadoA[$i]->descripcion];
+ $_SESSION['error'] = $e->getMessage();
 }
 
 //var_dump($array);
-$_SESSION['consultas']=$array;
-header("Location:https://php1-kennygonzales.c9users.io");
+
+header("Location:https://php1-kennygonzales.c9users.io/ws/clienteConsultas.php");
 ?>
