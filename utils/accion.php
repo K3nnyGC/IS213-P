@@ -19,6 +19,9 @@ switch ($_SESSION['pagina']) {
     case 4:
         header("Location:https://php1-kennygonzales.c9users.io/ws/clienteNotas.php"); 
         break;
+    case 5:
+        header("Location:https://php1-kennygonzales.c9users.io/ws/clienteHorario.php"); 
+        break;
     case 6:
         header("Location:https://php1-kennygonzales.c9users.io/ws/clienteDeudas.php"); 
         break;

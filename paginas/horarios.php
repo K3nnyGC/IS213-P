@@ -24,6 +24,8 @@ $data=[
         ]
     ];
 
+$data=$_SESSION['horario'];
+
 $cursos=[
     "-",
     "Matematica",
@@ -64,13 +66,13 @@ $cursos=[
                         <?php for($j=0;$j< 13;$j++){ ?>
                             <tr>
                                 <td><?php echo "". ($j+8) . "-" . ($j+9);?></td>
-                                <td><?php echo $cursos[$data[$i]['dias'][0][$j]]; ?></td>
-                                <td><?php echo $cursos[$data[$i]['dias'][1][$j]]; ?></td>
-                                <td><?php echo $cursos[$data[$i]['dias'][2][$j]]; ?></td>
-                                <td><?php echo $cursos[$data[$i]['dias'][3][$j]]; ?></td>
-                                <td><?php echo $cursos[$data[$i]['dias'][4][$j]]; ?></td>
-                                <td><?php echo $cursos[$data[$i]['dias'][5][$j]]; ?></td>
-                                <td><?php echo $cursos[$data[$i]['dias'][6][$j]]; ?></td>
+                                <td><div class="dia"><?php echo $data[$i]['dias'][0][$j]; ?></div></td>
+                                <td><div class="dia"><?php echo $data[$i]['dias'][1][$j]; ?></div></td>
+                                <td><div class="dia"><?php echo $data[$i]['dias'][2][$j]; ?></div></td>
+                                <td><div class="dia"><?php echo $data[$i]['dias'][3][$j]; ?></div></td>
+                                <td><div class="dia"><?php echo $data[$i]['dias'][4][$j]; ?></div></td>
+                                <td><div class="dia"><?php echo $data[$i]['dias'][5][$j]; ?></div></td>
+                                <td><div class="dia"><?php echo $data[$i]['dias'][6][$j]; ?></div></td>
                             </tr>
                         <?php } ?>
                     </tbody>
