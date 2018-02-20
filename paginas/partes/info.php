@@ -187,8 +187,8 @@
   <div class="row">
     <div class="col-sm-8">
       <h2 style="text-align:justify;">Acerca de la empresa</h2><br>
-      <h4 style="text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p style="text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h4 style="text-align:justify;">MySchool es un aplicativo basado en una Arquitectura SOA que permitir&aacute; integrar servicios creados en diferentes lenguajes y que se despliegan en diferentes plataformas (SUNAT, RENIEC, Bancos). Los propietarios y directivos de los colegios tendr&aacute;n acceso a informaci&oacute;n actualizada para la toma de decisiones y la aplicaci&oacute;n de las correcciones.</h4><br>
+      <p style="text-align:justify;">Con la implementaci&oacute;n del aplicativo My School empleando la metodolog&iacute;a SOA, se lograr&aacute; que los cambios a los componentes individuales sean m&aacute;s f&aacute;ciles de realizar, sin afectar al resto del sistema. La arquitectura del sistema permite la interoperabilidad de los procesos, aunque hayan sido creados en diferentes momentos y as&iacute;, aumentar los niveles de flexibilidad y agilidad para satisfacer de modo eficiente las diferentes necesidades que surjan o que soliciten los colegios.</p>
       
     </div>
     <div class="col-sm-4">
@@ -204,9 +204,14 @@
     </div>
     <div class="col-sm-8">
       <h2>Nuestros valores</h2><br>
-      <h4 style="text-align:justify;"><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p  style="text-align:justify;"><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h4 style="text-align:justify;"><strong>MISION:</strong> Con el uso de esta aplicaci&oacute;n, esperamos los siguientes resultados:
+        <ul>
+        <li>Padres de familia muy satisfechos.</li>
+        <li>Alumnos m&aacute;s comprometidos con sus estudios.</li>
+        <li>Personal administrativo del colegio m&aacute;s involucrado con la ense&ntilde;anza.</li>
+        </ul>
+        </h4><br>
+      <p  style="text-align:justify;"><strong>VISION:</strong>Ser una de las aplicaciones m&aacute;s utilizadas en el sector educativo en un corto plazo.</p>
     </div>
   </div>
 </div>
@@ -219,36 +224,36 @@
   <div class="row slideanim">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-off logo-small" style="color: #205448;"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>CONTROL</h4>
+      <p>Manten el C.E. en tus manos</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-heart logo-small" style="color: #205448;"></span>
-      <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>CARI&Ntilde;O</h4>
+      <p>Tratamos a tus usuarios como se merecen</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-lock logo-small" style="color: #205448;"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>SEGURIDAD</h4>
+      <p>Tu informacion en el mejor lugar.</p>
     </div>
   </div>
   <br><br>
   <div class="row slideanim">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-leaf logo-small" style="color: #205448;"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>AMIGABLE</h4>
+      <p>Con interfases totalmente intiutivas.</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-certificate logo-small" style="color: #205448;"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>LAUREADOS</h4>
+      <p>El mejor servicio de intranet que encontrar&aacute;s</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-wrench logo-small" style="color: #205448;"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4 style="color:#303030;">A TU MEDIDA</h4>
+      <p>Configurado bajo tus necesidades.</p>
     </div>
   </div>
 </div>
@@ -269,13 +274,13 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+        <h4>"Contrat&eacute MySchool para administrar mi centro educativo<br> y desde entonces tengo toda la informacion al alcance de mi mano."<br><span>Roberto LLanos, Promotor C.E. Los Angeles</span></h4>
       </div>
       <div class="item">
-        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+        <h4>"Pusieron MySchool en mi colegio, ahora lo sabr&eacute; todo!"<br><span>Mar&iacute;a Flores, Abogada</span></h4>
       </div>
       <div class="item">
-        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+        <h4>"Usarlo? M&aacute;s facil imposible!"<br><span>Lorenzo Carrillo, Fotografo, 3 hijos</span></h4>
       </div>
     </div>
 
