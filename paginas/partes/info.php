@@ -353,7 +353,7 @@
         </div>
         <div class="panel-footer">
           <h3>$1350</h3>
-          <h4>per month</h4>
+          <h4>por mes</h4>
         </div>
       </div>      
     </div>    

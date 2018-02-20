@@ -63,9 +63,9 @@
             
         }
         
-        public function validarCambioCorreo($correo,$nombre){
+        public function validarCambioCorreo($correo,$id){
             $db = $this->iniciar();
-            $query = "SELECT * FROM t_usuario WHERE tx_email='$correo' AND no_user != '$nombre'";
+            $query = "SELECT * FROM t_usuario WHERE tx_email='$correo' AND id_user != '$id'";
 	        $result = $db->query($query); 
 	        if ($line = $result->fetch_assoc()){
 	            return new soap_fault('-1', 'CORREO', "El Correo $correo, ya esta registrado !",'');

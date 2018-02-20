@@ -17,7 +17,7 @@ $dni=$_SESSION['usuario']['dni'];
 
 
 include_once('lib/nusoap.php');
-include_once('Entidades/BD.php');
+//include_once('Entidades/BD.php');
 $cliente = new nusoap_client("https://php1-kennygonzales.c9users.io/ws/registro.php",false);
 
 $parametros = array('nombre' => $nombre,'correo' => $correo,'password' => $password,'dni' => $dni );
@@ -28,8 +28,9 @@ if (isset($respuesta['faultstring'])){
     $_SESSION['error']=$respuesta['faultstring'];
     $_SESSION['pagina']=0;
 } else {
-    $usuario= new Usuario();
-    $_SESSION['usuario']=$usuario->mostrar($correo);
+    //$usuario= new Usuario();
+    //$_SESSION['usuario']=$usuario->mostrar($correo);
+    $_SESSION['usuario']=$respuesta;
     $_SESSION['pagina']=3;
     //var_dump($usuario->mostrar($dni));
 }

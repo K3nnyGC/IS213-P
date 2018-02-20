@@ -16,10 +16,11 @@ $array=[];
 $resultadoA=$result->getDeudasPorUsuarioResult->DeudaBE;
 if (is_array($resultadoA)){
 } else {
-    $resultadoA=[$resultadoA];
+    $resultadoA = is_null($resultadoA) ? []:[$resultadoA];
+    //$resultadoA=[$resultadoA];
 }
 
-var_dump($resultadoA);
+//var_dump($resultadoA);
 for ($i=0;$i<count($resultadoA);$i++){
     $array[]=['idDeuda'=>$resultadoA[$i]->idDeuda,
         'concepto'=>$resultadoA[$i]->concepto,

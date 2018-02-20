@@ -1,7 +1,7 @@
 <div class="tabla-datos">
     <form name="datos" action="ws/clienteEditar.php" METHOD='POST'>
     <p>PERFIL</p>
-    <div>Nombre</div><input class="nulo" name="nombre" type="text" value="<?php echo $_SESSION['usuario']['no_user']; ?>" readonly/>
+    <div>Nombre</div><input class="nulo" name="nombre" type="text" value="<?php echo utf8_decode($_SESSION['usuario']['no_user']); ?>" readonly/>
     <p id="td-nombre" class="tabla-datos-error"><br></p>
     <div>Correo</div><input name="correo" type="text" value="<?php echo $_SESSION['usuario']['tx_email']; ?>" />
     <p id="td-correo" class="tabla-datos-error"><br></p>

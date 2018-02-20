@@ -9,10 +9,10 @@
         <input type="password" NAME="password" placeholder="Clave" />
         <div id="msg-password2"><br></div>
     </form>
-    <div class="redes">
+    <!--<div class="redes">
         <i class="fa fa-facebook-official" aria-hidden="true"></i>
         <i class="fa fa-twitter" aria-hidden="true"></i>
         <i class="fa fa-google" aria-hidden="true"></i>
-    </div>
+    </div>-->
     <div id="btn-enviar2">Enviar</div>
 </div>

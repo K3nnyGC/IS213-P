@@ -13,12 +13,12 @@ try {
  $client = new SoapClient($url, [ "trace" => 1 ] );
  $result = $client->createConsulta( [
      'oContactoBE'=>[
-         'asunto' => $asunto,
-         'descripcion' => $descripcion,
+         'asunto' => utf8_encode($asunto),
+         'descripcion' => utf8_encode($descripcion),
          'idUsuario'=> $usuario
          ]
      ] );
- //var_dump($result->ListaCalificacionesResult->Calificacion);
+
 } catch ( SoapFault $e ) {
  $_SESSION['error'] = $e->getMessage();
 }

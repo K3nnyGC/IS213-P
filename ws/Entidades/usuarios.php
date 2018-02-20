@@ -22,9 +22,9 @@ class Usuario extends BD {
 	    $_SESSION['pagina']=3;
     }
     
-    public function editar($correo,$nombre,$telefono,$direccion){
+    public function editar($correo,$nombre,$telefono,$direccion,$id){
         $db = $this->iniciar();
-        $query="UPDATE  t_usuario SET tx_telefono = '$telefono', tx_email='$correo' , tx_direccion = '$direccion' WHERE no_user = '$nombre'";
+        $query="UPDATE  t_usuario SET tx_telefono = '$telefono', tx_email='$correo' , tx_direccion = '$direccion' WHERE id_user = '$id'";
 	    $result = $db->query($query);    
     }
      

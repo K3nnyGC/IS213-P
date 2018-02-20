@@ -3,8 +3,10 @@
 setlocale(LC_TIME, "es_ES.utf8");
 date_default_timezone_set('America/Lima');
 session_start(['cookie_lifetime' => 86400,]);
+
 $usuarioActual=$_SESSION['usuario']['id_user'];
 $url = "http://evelynross-001-site1.htempurl.com/ServicioVarios.svc?wsdl";
+
 try {
  $client = new SoapClient($url, [ "trace" => 1 ] );
  $result = $client->getConsultasPorUsuario( ['idUsuario'=> $usuarioActual] );
@@ -20,7 +22,7 @@ if (is_array($resultadoA)){
     $resultadoA=[$resultadoA];
 }
 
-var_dump($resultadoA);
+//var_dump($resultadoA);
 for ($i=0;$i<count($resultadoA);$i++){
     $array[]=['fecha'=>$resultadoA[$i]->fechaCreacion,
         'motivo'=>$resultadoA[$i]->asunto,

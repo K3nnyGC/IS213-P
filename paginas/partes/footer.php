@@ -1,4 +1,4 @@
-<center>&copy;2018 - Snikers</center>
+<center>&copy;2018 - Snickers</center>
 <!--<div>
     <p>
         &iquest;Necesitas el servicio de Intranet de MySchool para tu instituci&oacute;n?

@@ -10,26 +10,27 @@ $telefono=$_POST['telefono'];
 $direccion=$_POST['direccion'];
 
 include_once('lib/nusoap.php');
-include_once('Entidades/BD.php');
+//include_once('Entidades/BD.php');
 $cliente = new nusoap_client("https://php1-kennygonzales.c9users.io/ws/registro.php",false);
 
-$parametros = array('correo' => $correo,'nombre' => $nombre,'telefono' => $telefono,'direccion' => $direccion);
-$_SESSION['test']=$parametros;
+$parametros = array('correo' => $correo,'nombre' => $nombre,'telefono' => $telefono,'direccion' => $direccion,'id' => $_SESSION['usuario']['id_user']);
+//$_SESSION['test']=$parametros;
 $respuesta = $cliente->call("edit",$parametros);
 
 if (isset($respuesta['faultstring'])){
     $_SESSION['error']=$respuesta['faultstring'];
     $_SESSION['pagina']=3;
 } else {
-    $usuario= new Usuario();
-    $_SESSION['usuario']=$usuario->mostrar($correo);
+    //$usuario= new Usuario();
+    //$_SESSION['usuario']=$usuario->mostrar($correo);
+    $_SESSION['usuario']=$respuesta;
     $_SESSION['pagina']=3;
     $_SESSION['ok']="Datos Actualizados!";
     //var_dump($usuario->mostrar($dni));
 }
 header("Location:https://php1-kennygonzales.c9users.io");
 
-//var_dump("$nombre $correo");
-//var_dump($_POST);
+
+//var_dump($_SESSION);
 
 ?>
