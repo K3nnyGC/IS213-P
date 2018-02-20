@@ -167,6 +167,8 @@ h1 {
 }
 
 .banner{
+   font-size: 90%;
+    color: black;
    width: 20%;
    margin: 5%;
    margin-bottom: 0%;
@@ -206,7 +208,7 @@ footer {
    color: white;
    margin: 0%;
    padding: 1%;
-   margin-top: 5%;
+   margin-top: 0%;
    font-family: "Source Code Pro", monospace;
    font-size: 130%;
 }

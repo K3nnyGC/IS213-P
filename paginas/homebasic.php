@@ -32,6 +32,8 @@
 <div id="sombra" class="home-1"></div>
 <?php include_once("partes/signup.php"); ?>
 <?php include_once("partes/login.php"); ?>
+<?php include_once("partes/info.php"); ?>
+
 <footer>
 <?php include_once("partes/footer.php"); ?>    
 </footer>

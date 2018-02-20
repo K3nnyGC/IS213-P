@@ -1,4 +1,5 @@
-<div>
+<center>&copy;2018 - Snikers</center>
+<!--<div>
     <p>
         &iquest;Necesitas el servicio de Intranet de MySchool para tu instituci&oacute;n?
     </p>
@@ -14,4 +15,4 @@
         <i class="fa fa-envelope" aria-hidden="true"></i> info@myschool.com<br>
         <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp;/myschool<br>
     </p>
-</div>
+</div>-->
